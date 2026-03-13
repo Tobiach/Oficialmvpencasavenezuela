@@ -146,6 +146,8 @@ const OrderConfirmationView: React.FC<OrderConfirmationViewProps> = ({
         const { data: authData } = await supabase.auth.getUser();
         const supaUserId = authData?.user?.id ?? null;
 
+        console.log('💾 Intentando guardar pedido en Supabase...', { supaUserId, storeId });
+
         const { data: orderRow, error: orderErr } = await supabase
           .from('orders')
           .insert({
@@ -162,9 +164,13 @@ const OrderConfirmationView: React.FC<OrderConfirmationViewProps> = ({
           .select('id')
           .single();
 
-        if (orderErr) throw orderErr;
+        if (orderErr) {
+          console.error('❌ Error al insertar order:', orderErr);
+          throw orderErr;
+        }
 
         orderId = orderRow?.id;
+        console.log('✅ Pedido guardado. ID:', orderId);
 
         const itemsPayload = cart.map(i => ({
           order_id: orderId,
@@ -179,11 +185,16 @@ const OrderConfirmationView: React.FC<OrderConfirmationViewProps> = ({
           .from('order_items')
           .insert(itemsPayload);
 
-        if (itemsErr) throw itemsErr;
+        if (itemsErr) {
+          console.error('❌ Error al insertar items:', itemsErr);
+          throw itemsErr;
+        }
+        
+        console.log('✅ Items guardados correctamente.');
 
       } catch (dbErr) {
         // No rompemos conversión: igual mandamos WhatsApp.
-        console.error("DB insert failed (orders/order_items):", dbErr);
+        console.warn("⚠️ DB insert failed (orders/order_items), proceeding to WhatsApp anyway:", dbErr);
       }
 
       // 2) Registrar compra internamente (local) sin bloquear
