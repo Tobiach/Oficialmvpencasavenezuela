@@ -8,7 +8,7 @@ import { LOCALES_VENEZOLANOS } from '../data/localesAmigos';
 const allProducts: Product[] = [
   { 
     id: 101, name: "Combo Arepero Full", price: 10500, category: "Promociones", 
-    img: "imagenes_combos/combo_arepero.png", isCombo: true,
+    img: "/imagenes_combos/combo_arepero.png", isCombo: true,
     usageInfo: "Harina P.A.N., Diablitos y Queso Llanero.",
     storeId: 'real-11'
   },
@@ -20,13 +20,13 @@ const allProducts: Product[] = [
   },
   { 
     id: 106, name: "Combo Empanadas Venezolanas", price: 9200, category: "Promociones", 
-    img: "imagenes_combos/combo_empanadas_venezolanas.png", isCombo: true,
+    img: "/imagenes_combos/combo_empanadas_venezolanas.png", isCombo: true,
     usageInfo: "2 × Harina P.A.N., queso blanco, salsa guasacaca.",
     storeId: 'real-2'
   },
   { 
     id: 107, name: "Combo Desayuno Criollo", price: 15400, category: "Promociones", 
-    img: "imagenes_combos/combo_desayuno_criollo.png", isCombo: true,
+    img: "/imagenes_combos/combo_desayuno_criollo.png", isCombo: true,
     usageInfo: "1 × Harina P.A.N., queso llanero, mantequilla, café venezolano, Nata, casabe, papelon.",
     storeId: 'real-3'
   },
@@ -38,7 +38,7 @@ const allProducts: Product[] = [
   },
   { 
     id: 109, name: "Combo Pabellón en Casa", price: 12600, category: "Promociones", 
-    img: "imagenes_combos/combo_pabellon.png", isCombo: true,
+    img: "/imagenes_combos/combo_pabellon.png", isCombo: true,
     usageInfo: "Caraotas negras, plátanos maduros, queso blanco rallado, Nata.",
     storeId: 'real-6'
   },
@@ -50,13 +50,13 @@ const allProducts: Product[] = [
   },
   { 
     id: 111, name: "Combo Merienda Venezolana", price: 6400, category: "Promociones", 
-    img: "imagenes_combos/combo_merienda_venezolana.png", isCombo: true,
+    img: "/imagenes_combos/combo_merienda_venezolana.png", isCombo: true,
     usageInfo: "Cocosette, Susy, café venezolano, catalinas.",
     storeId: 'real-10'
   },
   { 
     id: 112, name: "Combo Fiesta Venezolana", price: 24800, category: "Promociones", 
-    img: "imagenes_combos/combo_fiesta_venezolana.png", isCombo: true,
+    img: "/imagenes_combos/combo_fiesta_venezolana.png", isCombo: true,
     usageInfo: "Tequeños, mini empanadas, salsa guasacaca, 6 × Maltín Polar, 1 dulce venezolano, Chicharron.",
     storeId: 'real-12'
   },

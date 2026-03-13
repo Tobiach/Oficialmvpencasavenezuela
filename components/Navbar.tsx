@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ShoppingCart, Trash2, Plus, Minus, ExternalLink, UserCircle, Zap, Gift, CalendarCheck, BarChart3, Repeat, Wallet, Banknote, MessageSquareQuote, ChevronRight, ArrowLeft, Share2, Check } from 'lucide-react';
 import { Product, User } from '../types';
 import { useNavigate } from 'react-router-dom';
-import { LOGO_ENCASA_IMAGE } from '../assets/imagenes';
+import { LOGO_ENCASA_IMAGE } from '../src/assets/imagenes';
 
 interface NavbarProps {
   onNavHome: () => void;

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ShoppingBag, ChevronLeft, ChevronRight, Share2, Check } from 'lucide-react';
-import { HERO_SLIDE_1, HERO_SLIDE_2, HERO_SLIDE_3 } from '../assets/imagenes';
+import { HERO_SLIDE_1, HERO_SLIDE_2, HERO_SLIDE_3 } from '../src/assets/imagenes';
 
 interface HeroProps {
   onCatalogClick: () => void;

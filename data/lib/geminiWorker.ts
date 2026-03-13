@@ -28,7 +28,7 @@ export async function askGeminiWorker(args: {
   }
 
   try {
-      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+    const ai = new GoogleGenAI({ apiKey });
     
     // Mapeamos el historial al formato que espera el SDK
     const contents = history.map(m => ({
@@ -61,5 +61,4 @@ export async function askGeminiWorker(args: {
     return { text: "¡Epa pana! Se me quemaron los cables en la cocina. Intentemos de nuevo." };
   }
 }
-
 
